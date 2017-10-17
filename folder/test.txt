@@ -1,0 +1,6 @@
+param($url, $filename)
+
+$webclient = New-Object System.Net.WebClient
+$filepath = "$pwd\$filename"
+$webclient.DownloadFile($url,$filepath)
+echo "Saved $filename"
